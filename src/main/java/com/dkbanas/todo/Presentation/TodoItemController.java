@@ -20,11 +20,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TodoItemController {
 
-    @Autowired
-    private ITodoItemService todoItemService;
-
-    @Autowired
-    private TodoItemMapper todoItemMapper;
+    private final ITodoItemService todoItemService;
+    private final TodoItemMapper todoItemMapper;
 
     @GetMapping
     public ResponseEntity<List<TodoItemResponseDTO>> getItemsByTodoListId(
